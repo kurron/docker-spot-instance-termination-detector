@@ -12,11 +12,6 @@ WORKDIR /home/microservice
 
 ENTRYPOINT ["/home/microservice/entrypoint.sh"]
 
-# Set the AWS environment variables
-ENV AWS_ACCESS_KEY_ID OVERRIDE ME
-ENV AWS_SECRET_ACCESS_KEY OVERRIDE_ME
-ENV AWS_REGION us-west-2
-
 ADD https://github.com/stedolan/jq/releases/download/jq-1.5/jq-linux64 /usr/local/bin/jq
 RUN chmod a+x /usr/local/bin/jq
 

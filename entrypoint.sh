@@ -4,7 +4,7 @@ POLL_INTERVAL=${POLL_INTERVAL:-5}
 NOTICE_URL=${NOTICE_URL:-http://169.254.169.254/latest/meta-data/spot/termination-time}
 
 INSTANCE_ID=$(curl --silent --location http://169.254.169.254/latest/meta-data/instance-id)
-REGION=$(curl --silent --location http://169.254.169.254/latest/dynamic/instance-identity/document// | jq '.region')
+REGION=$(curl --silent --location http://169.254.169.254/latest/dynamic/instance-identity/document// | jq --raw-output '.region')
 
 echo $(date): $(/usr/local/bin/aws --version)
 echo $(date): $(/usr/local/bin/jq --version)
