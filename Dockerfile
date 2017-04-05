@@ -17,6 +17,8 @@ ENV AWS_ACCESS_KEY_ID OVERRIDE ME
 ENV AWS_SECRET_ACCESS_KEY OVERRIDE_ME
 ENV AWS_REGION us-west-2
 
+ADD https://github.com/stedolan/jq/releases/download/jq-1.5/jq-linux64 /usr/local/jq
+
 COPY entrypoint.sh /home/microservice/entrypoint.sh
 
 RUN pip install --upgrade python-dateutil awscli
