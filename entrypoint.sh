@@ -26,7 +26,7 @@ JSON=$(cat <<END_HEREDOC
     {
         "Time": "${TIME}",
         "Source": "spot.instance.watcher",
-        "Resources": ["${INSTANCE_D}"],
+        "Resources": ["${INSTANCE_ID}"],
         "DetailType": "spotInstanceWatcherDetailType",
         "Detail": "{}"
     }
